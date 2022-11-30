@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Lorem Ipsum | Dominik Kolarský</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+
+    <!-- splidejs -->
+    <script src="js/splide.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/splide-core.min.css" />
+    <!-- typed.js -->
+    <script src="js/typed.min.js"></script>
+
+    <!-- splidejs, typedjs init after DOMloaded-->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        let splide1 = new Splide('#splide1', {
+          classes: {
+            pagination: 'splide__pagination',
+            page: 'splide__pagination__page my-paginator',
+          },
+          arrows: (boolean = false),
+          gap: '4rem',
+          speed: 2000,
+        });
+        splide1.mount();
+
+        let splide2 = new Splide('#splide2', {
+          classes: {
+            pagination: 'splide__pagination',
+            page: 'splide__pagination__page my-paginator',
+          },
+          arrows: (boolean = false),
+          cover: true,
+          heightRatio: 1,
+          speed: 1500,
+          // gap: '4rem',
+        });
+        splide2.mount();
+
+        let typed1 = new Typed('#typed1', {
+          strings: [
+            '999 999 Lorem Ipsum',
+            'Lorem Ipsum 99 sekund',
+            '1999 Lorem Ipsum',
+          ],
+          typeSpeed: 100,
+          backSpeed: 60,
+          loop: true,
+        });
+
+        let typed2 = new Typed('#typed2', {
+          strings: ['Lorem Ipsum', 'Ipsum dolor Lorem', 'Dolor lorem'],
+          typeSpeed: 100,
+          backSpeed: 60,
+          loop: true,
+        });
+      });
+    </script>
+  </head>
+
+  <body id="top" class="overflow-x-hidden">
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+      <symbol id="check" viewBox="0 0 35 35">
+        <path
+          data-name="Icon ionic-md-checkmark-circle-outline"
+          d="m10.325 14.175-2.45 2.45L15.75 24.5 33.25 7 30.8 4.55 15.75 19.512ZM31.5 17.5A13.94 13.94 0 1 1 21.35 4.025l2.712-2.713a16.278 16.278 0 0 0-6.563-1.313 17.5 17.5 0 1 0 17.5 17.5Z"
+          fill="#4361ee" />
+      </symbol>
+      <symbol id="twitter" viewBox="0 0 448 512">
+        <path
+          d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" />
+      </symbol>
+      <symbol id="linkedin" viewBox="0 0 448 512">
+        <path
+          d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+      </symbol>
+      <symbol id="instagram" viewBox="0 0 448 512">
+        <path
+          d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
+      </symbol>
+      <symbol id="facebook" viewBox="0 0 448 512">
+        <path
+          d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
+      </symbol>
+      <symbol id="email" viewBox="0 0 512 512">
+        <path
+          d="M256 64C150 64 64 150 64 256s86 192 192 192c17.7 0 32 14.3 32 32s-14.3 32-32 32C114.6 512 0 397.4 0 256S114.6 0 256 0S512 114.6 512 256v32c0 53-43 96-96 96c-29.3 0-55.6-13.2-73.2-33.9C320 371.1 289.5 384 256 384c-70.7 0-128-57.3-128-128s57.3-128 128-128c27.9 0 53.7 8.9 74.7 24.1c5.7-5 13.1-8.1 21.3-8.1c17.7 0 32 14.3 32 32v80 32c0 17.7 14.3 32 32 32s32-14.3 32-32V256c0-106-86-192-192-192zm64 192c0-35.3-28.7-64-64-64s-64 28.7-64 64s28.7 64 64 64s64-28.7 64-64z" />
+      </symbol>
+      <symbol id="mobile" viewBox="0 0 384 512">
+        <path
+          d="M16 64C16 28.7 44.7 0 80 0H304c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H80c-35.3 0-64-28.7-64-64V64zM144 448c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16s-7.2-16-16-16H160c-8.8 0-16 7.2-16 16zM304 64H80V384H304V64z" />
+      </symbol>
+
+      <symbol id="rastr1" viewBox="0 0 154.588 634.163">
+        <g data-name="Group 1781" fill="#cbcbcb">
+          <path data-name="Rectangle 868" d="M0 634.163v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 869" d="M0 604.233v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 870" d="M0 574.304v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 871" d="M0 544.374v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 872" d="M0 514.446v-5.648h5.647v5.648z" />
+          <path data-name="Rectangle 873" d="M0 484.516v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 874" d="M0 454.587v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 875" d="M0 424.657v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 876" d="M0 394.728v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 877" d="M0 364.798v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 878" d="M0 334.87v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 879" d="M0 304.94v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 880" d="M0 275.011v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 881" d="M0 245.081v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 882" d="M0 215.152v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 883" d="M0 185.222v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 884" d="M0 155.294v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 885" d="M0 125.364v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 886" d="M0 95.435v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 887" d="M0 65.505v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 888" d="M0 35.576v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 889" d="M0 5.647V0h5.647v5.647z" />
+          <path
+            data-name="Rectangle 890"
+            d="M29.788 634.163v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 891"
+            d="M29.789 604.234v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 892"
+            d="M29.789 574.304v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 893"
+            d="M29.789 544.375v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 894"
+            d="M29.789 514.446v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 895"
+            d="M29.789 484.516v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 896"
+            d="M29.789 454.587v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 897"
+            d="M29.789 424.657v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 898"
+            d="M29.789 394.728v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 899"
+            d="M29.789 364.799v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 900"
+            d="M29.789 334.869v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 901"
+            d="M29.789 304.94v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 902"
+            d="M29.789 275.011v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 903"
+            d="M29.789 245.081v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 904"
+            d="M29.789 215.152v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 905"
+            d="M29.789 185.223v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 906"
+            d="M29.789 155.293v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 907"
+            d="M29.789 125.364v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 908"
+            d="M29.789 95.435v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 909"
+            d="M29.789 65.505v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 910"
+            d="M29.789 35.576v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 911" d="M29.788 5.647V0h5.647v5.647z" />
+          <path
+            data-name="Rectangle 912"
+            d="M59.577 634.163v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 913"
+            d="M59.577 604.234v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 914"
+            d="M59.577 574.304v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 915"
+            d="M59.577 544.375v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 916"
+            d="M59.577 514.446v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 917"
+            d="M59.577 484.516v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 918"
+            d="M59.577 454.587v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 919"
+            d="M59.577 424.657v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 920"
+            d="M59.577 394.728v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 921"
+            d="M59.577 364.799v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 922"
+            d="M59.577 334.869v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 923"
+            d="M59.577 304.94v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 924"
+            d="M59.577 275.011v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 925"
+            d="M59.577 245.081v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 926"
+            d="M59.577 215.152v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 927"
+            d="M59.577 185.223v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 928"
+            d="M59.577 155.293v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 929"
+            d="M59.577 125.364v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 930"
+            d="M59.577 95.435v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 931"
+            d="M59.577 65.505v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 932"
+            d="M59.577 35.576v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 933" d="M59.577 5.647V0h5.647v5.647z" />
+          <path
+            data-name="Rectangle 934"
+            d="M89.365 634.163v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 935"
+            d="M89.365 604.234v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 936"
+            d="M89.365 574.304v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 937"
+            d="M89.365 544.375v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 938"
+            d="M89.365 514.446v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 939"
+            d="M89.365 484.516v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 940"
+            d="M89.365 454.587v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 941"
+            d="M89.365 424.657v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 942"
+            d="M89.365 394.728v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 943"
+            d="M89.365 364.799v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 944"
+            d="M89.365 334.869v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 945"
+            d="M89.365 304.94v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 946"
+            d="M89.365 275.011v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 947"
+            d="M89.365 245.081v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 948"
+            d="M89.365 215.152v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 949"
+            d="M89.365 185.223v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 950"
+            d="M89.365 155.293v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 951"
+            d="M89.365 125.364v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 952"
+            d="M89.365 95.435v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 953"
+            d="M89.365 65.505v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 954"
+            d="M89.365 35.576v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 955" d="M89.365 5.647V0h5.647v5.647z" />
+          <path
+            data-name="Rectangle 956"
+            d="M119.153 634.163v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 957"
+            d="M119.153 604.234v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 958"
+            d="M119.153 574.304v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 959"
+            d="M119.153 544.375v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 960"
+            d="M119.153 514.446v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 961"
+            d="M119.153 484.516v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 962"
+            d="M119.153 454.587v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 963"
+            d="M119.153 424.657v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 964"
+            d="M119.153 394.728v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 965"
+            d="M119.153 364.799v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 966"
+            d="M119.153 334.869v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 967"
+            d="M119.153 304.94v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 968"
+            d="M119.153 275.011v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 969"
+            d="M119.153 245.081v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 970"
+            d="M119.153 215.152v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 971"
+            d="M119.153 185.223v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 972"
+            d="M119.153 155.293v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 973"
+            d="M119.153 125.364v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 974"
+            d="M119.153 95.435v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 975"
+            d="M119.153 65.505v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 976"
+            d="M119.153 35.576v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 977" d="M119.153 5.647V0h5.647v5.647z" />
+          <path
+            data-name="Rectangle 978"
+            d="M148.941 634.163v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 979"
+            d="M148.941 604.234v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 980"
+            d="M148.941 574.304v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 981"
+            d="M148.941 544.375v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 982"
+            d="M148.941 514.446v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 983"
+            d="M148.941 484.516v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 984"
+            d="M148.941 454.587v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 985"
+            d="M148.941 424.657v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 986"
+            d="M148.941 394.728v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 987"
+            d="M148.941 364.799v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 988"
+            d="M148.941 334.869v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 989"
+            d="M148.941 304.94v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 990"
+            d="M148.941 275.011v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 991"
+            d="M148.941 245.081v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 992"
+            d="M148.941 215.152v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 993"
+            d="M148.941 185.223v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 994"
+            d="M148.941 155.293v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 995"
+            d="M148.941 125.364v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 996"
+            d="M148.941 95.435v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 997"
+            d="M148.941 65.505v-5.647h5.647v5.647z" />
+          <path
+            data-name="Rectangle 998"
+            d="M148.941 35.576v-5.647h5.647v5.647z" />
+          <path data-name="Rectangle 999" d="M148.941 5.647V0h5.647v5.647z" />
+        </g>
+      </symbol>
+
+      <symbol id="rastr2" viewBox="0 0 155.294 154.588">
+        <g data-name="Group 1767" fill="#cbcbcb">
+          <path data-name="Rectangle 868" d="M0 .001h5.647v5.647H0z" />
+          <path data-name="Rectangle 869" d="M29.93.001h5.647v5.647H29.93z" />
+          <path data-name="Rectangle 870" d="M59.859.001h5.647v5.647h-5.647z" />
+          <path data-name="Rectangle 871" d="M89.789.001h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 872"
+            d="M119.717.001h5.648v5.647h-5.648z" />
+          <path
+            data-name="Rectangle 873"
+            d="M149.647.001h5.647v5.647h-5.647z" />
+          <path data-name="Rectangle 890" d="M0 29.789h5.647v5.647H0z" />
+          <path
+            data-name="Rectangle 891"
+            d="M29.929 29.79h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 892"
+            d="M59.859 29.79h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 893"
+            d="M89.788 29.79h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 894"
+            d="M119.717 29.79h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 895"
+            d="M149.647 29.79h5.647v5.647h-5.647z" />
+          <path data-name="Rectangle 912" d="M0 59.577h5.647v5.647H0z" />
+          <path
+            data-name="Rectangle 913"
+            d="M29.929 59.577h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 914"
+            d="M59.859 59.577h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 915"
+            d="M89.788 59.577h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 916"
+            d="M119.717 59.577h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 917"
+            d="M149.647 59.577h5.647v5.647h-5.647z" />
+          <path data-name="Rectangle 934" d="M0 89.366h5.647v5.647H0z" />
+          <path
+            data-name="Rectangle 935"
+            d="M29.929 89.366h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 936"
+            d="M59.859 89.366h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 937"
+            d="M89.788 89.366h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 938"
+            d="M119.717 89.366h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 939"
+            d="M149.647 89.366h5.647v5.647h-5.647z" />
+          <path data-name="Rectangle 956" d="M0 119.154h5.647v5.647H0z" />
+          <path
+            data-name="Rectangle 957"
+            d="M29.929 119.154h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 958"
+            d="M59.859 119.154h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 959"
+            d="M89.788 119.154h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 960"
+            d="M119.717 119.154h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 961"
+            d="M149.647 119.154h5.647v5.647h-5.647z" />
+          <path data-name="Rectangle 978" d="M0 148.941h5.647v5.647H0z" />
+          <path
+            data-name="Rectangle 979"
+            d="M29.929 148.941h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 980"
+            d="M59.859 148.941h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 981"
+            d="M89.788 148.941h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 982"
+            d="M119.717 148.941h5.647v5.647h-5.647z" />
+          <path
+            data-name="Rectangle 983"
+            d="M149.647 148.941h5.647v5.647h-5.647z" />
+        </g>
+      </symbol>
+    </svg>
+
+    <nav id="nav">
+      <div
+        class="nav--wrapper mx-auto pl-4 lg:max-w-[1920px] lg:px-10 xl:px-28">
+        <a href="#" class="text-white font-extrabold text-[30px]">
+          | LI | 
+        </a>
+        <ul id="mobile-menu" class="nav--menu font-thin text-white">
+          <li
+            class="nav--item mb-5 border-b border-b-slate-600 p-4 duration-200 hover:text-slate-300 lg:mb-0 lg:border-b-0 lg:py-0 lg:px-5 lg:text-lg xl:text-xl">
+            <a href="#hrozby" class="nav-link">Lorem</a>
+          </li>
+          <li
+            class="nav--item mb-5 border-b border-b-slate-600 p-4 duration-200 hover:text-slate-300 lg:mb-0 lg:border-b-0 lg:py-0 lg:px-5 lg:text-lg xl:text-xl">
+            <a href="#o-centru" class="nav-link">Ipsum</a>
+          </li>
+          <li
+            class="nav--item mb-5 border-b border-b-slate-600 p-4 duration-200 hover:text-slate-300 lg:mb-0 lg:border-b-0 lg:py-0 lg:px-5 lg:text-lg xl:text-xl">
+            <a href="#jak-se-chranit" class="nav-link">Dolor</a>
+          </li>
+          <li
+            class="nav--item mb-5 border-b border-b-slate-600 p-4 duration-200 hover:text-slate-300 lg:mb-0 lg:border-b-0 lg:py-0 lg:px-5 lg:text-lg xl:text-xl">
+            <a href="#vybaveni" class="nav-link">Sit</a>
+          </li>
+          <li
+            class="nav--item mb-5 border-b border-b-slate-600 p-4 duration-200 hover:text-slate-300 lg:mb-0 lg:border-b-0 lg:py-0 lg:px-5 lg:text-lg xl:text-xl">
+            <a href="#" class="nav-link">Amet</a>
+          </li>
+        </ul>
+
+        <div id="mobile-hamburger" class="nav--hamburger">
+          <span class="nav--hamburger__bar"></span>
+          <span class="nav--hamburger__bar"></span>
+          <span class="nav--hamburger__bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="header--bg text-customWhite">
+      <video
+        class="header--bg__video"
+        poster="src/video.png"
+        autoplay
+        muted
+        loop>
+        <source src="src/video.mp4" type="video/mp4" />
+      </video>
+
+      <div
+        class="header--text mx-auto flex flex-col items-start justify-center pl-6 pr-6 xs:pl-8 xs:pr-16 md:container md:pr-8 lg:pl-[10%]">
+        <h1 class="heading--1 max-w-[800px] 2xl:max-w-[950px] 2xl:text-7xl">
+          Lorem ipsum dolor sit amet consectetur.
+        </h1>
+        <a
+          href="#o-centru"
+          class="mt-10 bg-customRed2 px-6 py-4 text-xl transition-all duration-300 ease-out hover:bg-customRed1">
+          Lorem
+        </a>
+      </div>
+      <div class="arrow--wrapper">
+        <div class="arrow bounce">
+          <a class="" href="#hrozby">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="hrozby"
+      class="bg-csBgGrey bg-[url('../src/bg-1.png')] bg-cover bg-top bg-blend-overlay">
+      <div
+        class="w-full from-customDarkBlue2 via-transparent to-customDarkBlue2 2xl:bg-gradient-to-r">
+        <div
+          class="mx-auto flex w-full flex-col lg:flex-row 2xl:max-w-[1920px]">
+          <div class="flex-1 bg-customDarkBlue2 py-16 px-12 md:px-8">
+            <p
+              class="heading--1 mx-auto mb-2 max-w-[300px] text-customPrimaryBlue">
+              99 %
+            </p>
+            <p class="text--bold mx-auto max-w-[300px] text-customWhite">
+              Lorem ipsum dolor sit amet consectetur
+            </p>
+          </div>
+          <div
+            class="flex-1 bg-customDarkBlue2 bg-opacity-40 py-16 px-12 md:px-8">
+            <p
+              class="heading--1 mx-auto mb-2 max-w-[300px] text-customPrimaryBlue">
+              99 mil.
+            </p>
+            <p class="text--bold mx-auto max-w-[300px] text-customWhite">
+              Lorem ipsum dolor sit amet consectetur
+            </p>
+          </div>
+          <div class="flex-1 bg-customDarkBlue2 py-16 px-12 md:px-8">
+            <p
+              class="heading--1 mx-auto mb-2 max-w-[300px] text-customPrimaryBlue">
+              99 days
+            </p>
+            <p class="text--bold mx-auto max-w-[300px] text-customWhite">
+              Lorem ipsum dolor sit amet consectetur
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mx-auto flex flex-col-reverse px-5 pt-20 md:container md:px-10 lg:grid lg:grid-cols-2 lg:gap-16 xl:gap-20 2xl:gap-24">
+        <div class="mb-20 flex pl-8 sm:pl-16 sm:pt-16">
+          <div class="relative self-end">
+            <svg
+              class="absolute top-0 left-0 w-16 -translate-x-1/2 -translate-y-1/2 sm:w-32 xl:h-40 xl:w-40">
+              <use href="#rastr2"></use>
+            </svg>
+            <div
+              class="relative max-h-96 min-h-fit min-w-full max-w-2xl overflow-hidden">
+              <img src="src/img-1.png" alt="team" class="object-cover" />
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <h3
+            class="heading--1 heading--typed mb-8 max-w-[570px] text-customWhite">
+            <span id="typed1"></span>
+          </h3>
+          <p
+            class="text--light mb-20 text-[#DFE3EA] md:text-lg lg:max-w-[400px] xl:text-2xl 2xl:max-w-[580px] 2xl:text-[28px] 2xl:leading-[38px]">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. In fugiat ipsa cum repellat voluptatibus nulla nostrum amet asperiores?
+            <br />
+            <br />
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            <br />
+            <br />
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, nemo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="o-centru" class="relative bg-[#F4F4F4]">
+      <div
+        class="relative mx-auto flex flex-col-reverse px-5 py-20 md:container md:px-10 lg:grid lg:grid-cols-2 lg:gap-16 xl:gap-20 2xl:gap-24">
+        <div class="my-auto flex">
+          <div
+            class="relative mt-auto ml-auto min-h-fit min-w-full max-w-3xl overflow-hidden">
+            <img src="src/img-2.png" alt="centrum" class="object-cover mx-auto" />
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <h3 class="heading--1 mb-8 text-customDarkBlue1">Ipsum</h3>
+          <p
+            class="text--light mb-12 text-customBlack md:text-lg lg:max-w-[500px] xl:text-2xl 2xl:max-w-[580px] 2xl:text-[28px] 2xl:leading-[38px]">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ullam odit consequatur, reprehenderit at sapiente qui eum!
+            <br />
+            <br />
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor quaerat dicta dolorum, nam aut quas libero nemo cum pariatur quod cumque autem molestiae impedit rerum praesentium aspernatur, ex, quis repudiandae.
+            <br />
+            <br />
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ullam odit consequatur, reprehenderit at sapiente qui eum!
+          </p>
+        </div>
+
+        <svg
+          class="rastrSide absolute bottom-0 right-0 hidden h-[40rem] w-32 translate-y-1/2 lg:translate-x-0 xl:block 2xl:w-40">
+          <use href="#rastr1"></use>
+        </svg>
+      </div>
+    </section>
+
+    <section id="jak-se-chranit">
+      <div
+        class="bg-csBgGrey bg-[url('../src/bg-2.png')] bg-cover bg-center bg-blend-overlay">
+        <div
+          class="mx-auto flex flex-col-reverse px-5 py-20 md:container md:px-10 lg:grid lg:grid-cols-2 lg:gap-16 xl:gap-20 xl:py-20 xl:pt-40 2xl:gap-24">
+          <div class="flex pr-8 sm:pr-16 lg:pr-0">
+            <div class="relative self-end">
+              <svg
+                class="absolute bottom-0 right-0 w-16 translate-x-1/2 translate-y-1/2 sm:h-32 sm:w-32 xl:h-40 xl:w-40">
+                <use href="#rastr2"></use>
+              </svg>
+              <div
+                class="relative flex max-h-full min-h-fit min-w-full max-w-2xl justify-end overflow-hidden">
+                <img src="src/img-3.png" alt="centrum" class="object-cover" />
+              </div>
+            </div>
+          </div>
+
+          <div class="">
+            <h3
+              class="heading--1 heading--typed mb-8 max-w-[450px] text-customWhite">
+              <span id="typed2"></span>
+            </h3>
+
+            <p
+              class="text--light mb-20 text-[#DFE3EA] md:text-lg lg:max-w-[500px] xl:text-2xl 2xl:max-w-[550px] 2xl:text-[28px] 2xl:leading-[38px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ullam odit consequatur, reprehenderit at sapiente qui eum!
+              <br />
+              <br />
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor quaerat dicta dolorum, nam aut quas libero nemo cum pariatur quod cumque autem molestiae impedit rerum praesentium aspernatur, ex, quis repudiandae.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, numquam?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-csBgGrey bg-[url('../src/bg-1.png')] bg-cover bg-center bg-blend-overlay xl:pb-0">
+        <div
+          class="grid px-5 py-20 sm:px-5 md:mx-auto md:px-10 lg:container lg:grid-cols-6 lg:gap-8 xl:justify-around xl:gap-0 xl:py-24">
+          <div class="mx-auto max-w-[600px] lg:col-span-3">
+            <svg class="mb-7 h-20 w-20 md:h-32 md:w-32">
+              <use href="#lock"></use>
+            </svg>
+            <h3
+              class="heading--1 mb-8 text-customWhite md:mb-12 md:text-4xl lg:text-5xl">
+              Lorem ipsum dolor, sit amet consectetur adipisicing?
+            </h3>
+          </div>
+          <div
+            class="splide my-10 mx-auto max-w-[630px] p-5 lg:col-span-3 lg:my-24"
+            id="splide1"
+            role="group"
+            aria-label="gallery">
+            <div class="grid">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide flex">
+                    <div
+                      class="flex content-center justify-center border-2 border-customPrimaryBlue px-5 py-10 text-customWhite md:px-8 md:text-lg lg:px-12 lg:py-20 lg:text-xl xl:text-[26px]">
+                      <p class="my-auto">
+                        Lorem ipsum dolor sit, amet consectetur. Odit alias porro magnam exercitationem natus officiis, ad quod facere sint molestias nostrum optio dicta quibusdam distinctio?
+                      </p>
+                    </div>
+                  </li>
+                  <li class="splide__slide flex">
+                    <div
+                      class="flex content-center justify-center border-2 border-customPrimaryBlue px-5 py-10 text-customWhite md:px-8 md:text-lg lg:px-12 lg:py-20 lg:text-xl xl:text-[26px]">
+                      <p class="my-auto">
+                        Lorem ipsum dolor sit, amet consectetur. Odit alias porro magnam exercitationem natus officiis, ad quod facere sint molestias nostrum optio dicta quibusdam distinctio?
+                      </p>
+                    </div>
+                  </li>
+                  <li class="splide__slide flex">
+                    <div
+                      class="flex content-center justify-center border-2 border-customPrimaryBlue px-5 py-10 text-customWhite md:px-8 md:text-lg lg:px-12 lg:py-20 lg:text-xl xl:text-[26px]">
+                      <p class="my-auto">
+                        Lorem ipsum dolor sit, amet consectetur. Odit alias porro magnam exercitationem natus officiis, ad quod facere sint molestias nostrum optio dicta quibusdam distinctio?
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <ul class="splide__pagination flex"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="vybaveni">
+      <div class="relative bg-[#FFFFFF]">
+        <svg
+          class="absolute top-0 left-1/2 h-64 w-16 -translate-x-1/2 -translate-y-1/2 rotate-90 sm:h-[30rem] sm:w-24 lg:h-[40rem] lg:w-32 2xl:w-40">
+          <use href="#rastr1"></use>
+        </svg>
+
+        <div
+          class="mx-auto px-5 py-20 md:container md:px-10 lg:py-40 2xl:py-48">
+          <h3
+            class="heading--1 mb-10 max-w-[400px] text-customDarkBlue1 md:mb-12 lg:mb-20">
+            Lorem ipsum dolor sit
+          </h3>
+          <ul class="flex flex-wrap justify-center gap-5 lg:gap-8">
+            <li
+              class="flex max-w-[300px] flex-col items-center border-2 border-customPrimaryBlue p-8 text-center text-customDarkBlue1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-customPrimaryBlue mb-4" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zm48 0c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256z"/></svg>              <h4 class="mb-2 text-xl font-bold">Lorem</h4>
+              <p class="">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </li>
+            <li
+              class="flex max-w-[300px] flex-col items-center border-2 border-customPrimaryBlue p-8 text-center text-customDarkBlue1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="text-customPrimaryBlue mb-4" viewBox="0 0 640 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c1.8 0 3.5-.2 5.3-.5c-76.3-55.1-99.8-141-103.1-200.2c-16.1-4.8-33.1-7.3-50.7-7.3H178.3zm308.8-78.3l-120 48C358 277.4 352 286.2 352 296c0 63.3 25.9 168.8 134.8 214.2c5.9 2.5 12.6 2.5 18.5 0C614.1 464.8 640 359.3 640 296c0-9.8-6-18.6-15.1-22.3l-120-48c-5.7-2.3-12.1-2.3-17.8 0zM591.4 312c-3.9 50.7-27.2 116.7-95.4 149.7V273.8L591.4 312z"/></svg>
+              <h4 class="mb-2 text-xl font-bold">Dolor Ipsum</h4>
+              <p class="">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </li>
+            <li
+              class="flex max-w-[300px] flex-col items-center border-2 border-customPrimaryBlue p-8 text-center text-customDarkBlue1">
+              <svg xmlns="http://www.w3.org/2000/svg"   class="text-customPrimaryBlue mb-4" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M304 240V16.6c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16H304zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4V288L412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288H558.4z"/></svg>
+              <h4 class="mb-2 text-xl font-bold">Sit a Amet</h4>
+              <p class="">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </li>
+            <li
+              class="flex max-w-[300px] flex-col items-center border-2 border-customPrimaryBlue p-8 text-center text-customDarkBlue1">
+              <svg xmlns="http://www.w3.org/2000/svg"  class="text-customPrimaryBlue mb-4"  viewBox="0 0 640 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 64H384v64H256V64zM240 0c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48h48v32H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h96v32H80c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H240c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H192V288H448v32H400c-26.5 0-48 21.5-48 48v96c0 26.5 21.5 48 48 48H560c26.5 0 48-21.5 48-48V368c0-26.5-21.5-48-48-48H512V288h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H352V192h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H240zM96 448V384H224v64H96zm320-64H544v64H416V384z"/></svg>
+              <h4 class="mb-2 text-xl font-bold">Deleniti</h4>
+              <p class="">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="relative bg-[#F4F4F4]">
+        <svg
+          class="absolute top-0 hidden h-64 w-16 -translate-x-1/2 -translate-y-1/2 rotate-90 sm:h-[30rem] sm:w-24 lg:left-1/4 lg:block lg:h-[40rem] lg:w-32 2xl:w-40">
+          <use href="#rastr1"></use>
+        </svg>
+        <div
+          class="mx-auto flex flex-col gap-10 px-5 py-20 md:container md:px-10 lg:grid lg:grid-cols-2 lg:pt-32">
+          <div class="my-auto mr-auto max-w-[650px]">
+            <h3
+              class="heading--1 mb-10 max-w-[600px] text-customDarkBlue1 md:mb-12 lg:mb-16 lg:text-5xl">
+              Lorem ipsum dolor sit?
+            </h3>
+            <p
+              class="text--light mb-12 text-customBlack md:text-xl lg:max-w-[480px] lg:text-xl xl:text-[28px] xl:leading-9">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos officiis voluptatum rerum, vel nisi ipsum quisquam aperiam sit incidunt veritatis blanditiis deleniti excepturi officia in.
+            </p>
+
+            <ul class="font-bold text-customDarkBlue1 lg:text-xl">
+              <li class="mb-5 flex">
+                <div class="mr-4 flex">
+                  <svg class="h-8 w-8">
+                    <use href="#check"></use>
+                  </svg>
+                </div>
+                <span class="flex items-center">
+                  Lorem ipsum dolor sit amet consectetur adipisicing
+                </span>
+              </li>
+              <li class="mb-5 flex">
+                <div class="mr-4 flex">
+                  <svg class="h-8 w-8">
+                    <use href="#check"></use>
+                  </svg>
+                </div>
+                <span class="flex items-center">
+                  Lorem ipsum dolor sit amet
+                </span>
+              </li>
+              <li class="mb-5 flex">
+                <div class="mr-4 flex">
+                  <svg class="my-auto h-8 w-8">
+                    <use href="#check"></use>
+                  </svg>
+                </div>
+                <span class="flex items-center">
+                  Lorem ipsum dolor sit amet consectetur
+                </span>
+              </li>
+              <li class="mb-5 flex">
+                <div class="mr-4 flex">
+                  <svg class="h-8 w-8">
+                    <use href="#check"></use>
+                  </svg>
+                </div>
+                <span class="flex items-center">
+                  Lorem ipsum dolor sit amet
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="rastr relative">
+            <div class="splide" id="splide2" role="group" aria-label="gallery">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="src/img-2.png" alt="" class="" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="src/img-1.png" alt="" class="" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="src/img-3.png" alt="" class="" />
+                  </li>
+                </ul>
+              </div>
+              <ul class="splide__pagination flex"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-customDarkBlue1 px-5 pt-12 pb-16 text-customWhite xl:py-14">
+      <div
+        class="mx-auto text-center lg:container xl:grid xl:grid-cols-3 xl:text-left">
+        <p class="mx-auto mb-14 max-w-[470px] text-sm xl:mb-0">
+          2022 © Dominik Kolarský
+          <br />
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem incidunt voluptate alias, commodi praesentium doloremque ad pariatur maiores sunt perferendis!
+        </p>
+        <ul
+          class="mb-14 flex flex-wrap items-center justify-center gap-9 xl:mb-0">
+          <li class="flex hover:text-slate-400">
+            <svg class="hover h-[25px] w-[40px]">
+              <use href="#mobile"></use>
+            </svg>
+            <a href="tel:+420123456789" class="leading-[25px]">
+              +420 123 456 789
+            </a>
+          </li>
+          <li class="flex hover:text-slate-400">
+            <svg class="h-[25px] w-[40px]">
+              <use href="#email"></use>
+            </svg>
+            <a
+              href="mailto:hello@kolarsky.eu"
+              target="_blank"
+              class="leading-[25px]">
+              hello@kolarsky.eu
+            </a>
+          </li>
+        </ul>
+        <ul class="flex flex-row items-center justify-center gap-10">
+          <li class="hover:text-slate-400">
+            <a href="https://facebook.com" target="_blank">
+              <svg class="h-[35px] w-[35px]">
+                <use href="#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="hover:text-slate-400">
+            <a href="https://facebook.com" target="_blank">
+              <svg class="h-[35px] w-[35px]">
+                <use href="#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="hover:text-slate-400">
+            <a href="https://facebook.com" target="_blank">
+              <svg class="h-[35px] w-[35px]">
+                <use href="#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="hover:text-slate-400">
+            <a href="https://facebook.com" target="_blank">
+              <svg class="h-[35px] w-[35px]">
+                <use href="#instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <aside id="side__nav" class="hidden xl:flex">
+      <div class="flex h-6 w-5 justify-center">
+        <a
+          scroll-data="home"
+          href="#home"
+          class="side__nav--link self-center is-active-side"></a>
+      </div>
+      <div class="flex h-6 w-5 justify-center">
+        <a
+          scroll-data="hrozby"
+          href="#hrozby"
+          class="side__nav--link self-center"></a>
+      </div>
+      <div class="flex h-6 w-5 justify-center">
+        <a
+          scroll-data="o-centru"
+          href="#o-centru"
+          class="side__nav--link self-center"></a>
+      </div>
+      <div class="flex h-6 w-5 justify-center">
+        <a
+          scroll-data="jak-se-chranit"
+          href="#jak-se-chranit"
+          class="side__nav--link self-center"></a>
+      </div>
+      <div class="flex h-6 w-5 justify-center">
+        <a
+          scroll-data="vybaveni"
+          href="#vybaveni"
+          class="side__nav--link self-center"></a>
+      </div>
+    </aside>
+  </body>
+</html>

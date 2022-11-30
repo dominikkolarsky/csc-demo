@@ -1,0 +1,512 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ********* CUSTOM ********* */
+/* *, *::before, *::after {
+  outline: 1px solid #f00 !important;
+} */
+
+@media screen and (min-width: 1700px) {
+  .rastrSide {
+    right: -2rem;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 59px;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+svg {
+  height: 100px;
+  width: 100px;
+  fill: currentColor;
+}
+
+/* ********* HEADER BACKGROUND ********* */
+video {
+  max-width: unset;
+}
+
+.header--text {
+  width: 100vw;
+  height: 100vh;
+}
+
+.header--bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.header--bg::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.header--bg .header--bg__video {
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .header--bg .header--bg__video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .header--bg .header--bg__video {
+    width: auto;
+    height: 100%;
+  }
+}
+/* ********* END HEADER BG ********* */
+
+/* ********* TYPOGRAFY ********* */
+
+.heading--1 {
+  font-size: 38px;
+  font-weight: bold;
+  word-break: break-word;
+  line-height: var(--line-height);
+  --line-height: 1.3;
+}
+
+/* **** TYPED HEADING */
+.heading--1.heading--typed {
+  height: calc(var(--line-height) * 2em);
+}
+
+.typed-cursor {
+  display: inline;
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* **** TYPED HEADING */
+
+.text--light {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.text--bold {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 768px) {
+  .heading--1 {
+    font-size: 60px;
+  }
+
+  .text--bold {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+/* *********** NAVBAR handle, hamburger */
+nav.activeScroll {
+  background: black;
+}
+
+nav .nav--wrapper .nav--menu.activeOpen {
+  right: 0px;
+}
+
+/* hamburger style, animation */
+nav .nav--wrapper .nav--hamburger {
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+nav .nav--wrapper .nav--hamburger .nav--hamburger__bar {
+  background-color: white;
+  display: block;
+  width: 25px;
+  height: 2px;
+  border-radius: 1px;
+  margin: 3px auto;
+  border-radius: 1px;
+  transition: all 0.4s ease-out;
+}
+nav .nav--wrapper .nav--hamburger.activeOpen .nav--hamburger__bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+nav .nav--wrapper .nav--hamburger.activeOpen .nav--hamburger__bar:nth-child(2) {
+  opacity: 0;
+}
+nav .nav--wrapper .nav--hamburger.activeOpen .nav--hamburger__bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+/* *********** END NAVBAR handle, hamburger */
+
+nav {
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 20px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  transition: all 0.4s ease-out;
+}
+
+nav .nav--wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .nav--wrapper .nav--menu {
+  background: #222933;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: -100%;
+  top: 0px;
+  z-index: 999;
+  min-width: 300px;
+  max-width: 400px;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 50px 0 40px;
+  text-align: start;
+  transition: 0.8s;
+}
+
+/* *********** NAVBAR DESKTOP */
+@media screen and (min-width: 1024px) {
+  nav {
+    height: 100px;
+  }
+
+  nav.activeScroll {
+    background: black;
+    height: 60px;
+  }
+
+  nav .nav--wrapper .nav--hamburger {
+    display: none;
+  }
+
+  nav .nav--wrapper .nav--menu {
+    display: flex;
+    flex-direction: row;
+    position: unset;
+    width: auto;
+    height: unset;
+    align-items: center;
+    background: unset;
+    box-shadow: unset;
+    padding: unset;
+    white-space: nowrap;
+    min-width: unset;
+    max-width: unset;
+  }
+}
+
+/* *********** HEADER ARROW */
+.arrow--wrapper {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  text-align: center;
+}
+
+.arrow a svg {
+  width: 20px;
+  height: 20px;
+}
+
+.bounce {
+  -moz-animation: bounce 4s infinite;
+  -webkit-animation: bounce 4s infinite;
+  animation: bounce 4s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(1px);
+  }
+  40% {
+    transform: translateY(-4px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+/* *********** END HEADER ARROW */
+
+/* *********** SIDE BAR */
+
+#side--bar {
+  position: fixed;
+
+  left: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.radio--wrapper {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  padding: 12px;
+}
+
+.radio--custom {
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  height: 20px;
+  width: 20px;
+  z-index: 10;
+  cursor: pointer;
+}
+.radio--custom + label {
+  box-sizing: content-box;
+
+  cursor: pointer;
+  background: #9b9b9b;
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 1px;
+
+  transition: all 0.3s ease-out;
+}
+.radio--custom + label:before {
+  box-sizing: content-box;
+
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+
+  transition: all 0.3s ease-out;
+  border: 5px solid transparent;
+}
+
+.radio--custom:checked + label,
+.radio--custom:hover + label {
+  background-color: transparent;
+}
+.radio--custom:checked + label:before,
+.radio--custom:hover + label:before {
+  background-color: transparent;
+  border: 5px solid #4361ee;
+}
+
+/* *********** END SIDE BAR */
+
+/* *********** SPLIDE */
+
+.splide__pagination {
+  height: 68px;
+}
+
+.splide__pagination li {
+  height: 100%;
+  width: 25px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.my-paginator {
+  box-sizing: content-box;
+
+  cursor: pointer;
+  background: #9b9b9b;
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+  position: relative;
+
+  border: 5px solid none;
+  transition: all 0.3s ease-out;
+}
+.my-paginator::before {
+  box-sizing: content-box;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  transition: all 0.3s ease-out;
+  border: 4px solid transparent;
+}
+
+.my-paginator:hover {
+  background-color: transparent;
+}
+
+.my-paginator.is-active {
+  background-color: transparent;
+  border: 4px solid #4361ee;
+}
+
+.my-paginator:hover::before {
+  background-color: transparent;
+  border: 4px solid #4361ee;
+}
+.rastr::before {
+  display: none;
+}
+
+/* rastr splideru */
+@media screen and (min-width: 1600px) {
+  .rastr::before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 80%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-52%) translateX(50%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 154.588 634.163'%3E%3Cg data-name='Group 1781' fill='%23cbcbcb'%3E%3Cpath data-name='Rectangle 868' d='M0 634.163v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 869' d='M0 604.233v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 870' d='M0 574.304v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 871' d='M0 544.374v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 872' d='M0 514.446v-5.648h5.647v5.648z'/%3E%3Cpath data-name='Rectangle 873' d='M0 484.516v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 874' d='M0 454.587v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 875' d='M0 424.657v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 876' d='M0 394.728v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 877' d='M0 364.798v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 878' d='M0 334.87v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 879' d='M0 304.94v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 880' d='M0 275.011v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 881' d='M0 245.081v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 882' d='M0 215.152v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 883' d='M0 185.222v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 884' d='M0 155.294v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 885' d='M0 125.364v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 886' d='M0 95.435v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 887' d='M0 65.505v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 888' d='M0 35.576v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 889' d='M0 5.647V0h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 890' d='M29.788 634.163v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 891' d='M29.789 604.234v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 892' d='M29.789 574.304v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 893' d='M29.789 544.375v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 894' d='M29.789 514.446v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 895' d='M29.789 484.516v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 896' d='M29.789 454.587v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 897' d='M29.789 424.657v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 898' d='M29.789 394.728v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 899' d='M29.789 364.799v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 900' d='M29.789 334.869v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 901' d='M29.789 304.94v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 902' d='M29.789 275.011v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 903' d='M29.789 245.081v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 904' d='M29.789 215.152v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 905' d='M29.789 185.223v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 906' d='M29.789 155.293v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 907' d='M29.789 125.364v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 908' d='M29.789 95.435v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 909' d='M29.789 65.505v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 910' d='M29.789 35.576v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 911' d='M29.788 5.647V0h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 912' d='M59.577 634.163v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 913' d='M59.577 604.234v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 914' d='M59.577 574.304v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 915' d='M59.577 544.375v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 916' d='M59.577 514.446v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 917' d='M59.577 484.516v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 918' d='M59.577 454.587v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 919' d='M59.577 424.657v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 920' d='M59.577 394.728v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 921' d='M59.577 364.799v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 922' d='M59.577 334.869v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 923' d='M59.577 304.94v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 924' d='M59.577 275.011v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 925' d='M59.577 245.081v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 926' d='M59.577 215.152v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 927' d='M59.577 185.223v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 928' d='M59.577 155.293v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 929' d='M59.577 125.364v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 930' d='M59.577 95.435v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 931' d='M59.577 65.505v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 932' d='M59.577 35.576v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 933' d='M59.577 5.647V0h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 934' d='M89.365 634.163v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 935' d='M89.365 604.234v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 936' d='M89.365 574.304v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 937' d='M89.365 544.375v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 938' d='M89.365 514.446v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 939' d='M89.365 484.516v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 940' d='M89.365 454.587v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 941' d='M89.365 424.657v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 942' d='M89.365 394.728v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 943' d='M89.365 364.799v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 944' d='M89.365 334.869v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 945' d='M89.365 304.94v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 946' d='M89.365 275.011v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 947' d='M89.365 245.081v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 948' d='M89.365 215.152v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 949' d='M89.365 185.223v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 950' d='M89.365 155.293v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 951' d='M89.365 125.364v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 952' d='M89.365 95.435v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 953' d='M89.365 65.505v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 954' d='M89.365 35.576v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 955' d='M89.365 5.647V0h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 956' d='M119.153 634.163v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 957' d='M119.153 604.234v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 958' d='M119.153 574.304v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 959' d='M119.153 544.375v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 960' d='M119.153 514.446v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 961' d='M119.153 484.516v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 962' d='M119.153 454.587v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 963' d='M119.153 424.657v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 964' d='M119.153 394.728v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 965' d='M119.153 364.799v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 966' d='M119.153 334.869v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 967' d='M119.153 304.94v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 968' d='M119.153 275.011v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 969' d='M119.153 245.081v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 970' d='M119.153 215.152v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 971' d='M119.153 185.223v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 972' d='M119.153 155.293v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 973' d='M119.153 125.364v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 974' d='M119.153 95.435v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 975' d='M119.153 65.505v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 976' d='M119.153 35.576v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 977' d='M119.153 5.647V0h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 978' d='M148.941 634.163v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 979' d='M148.941 604.234v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 980' d='M148.941 574.304v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 981' d='M148.941 544.375v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 982' d='M148.941 514.446v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 983' d='M148.941 484.516v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 984' d='M148.941 454.587v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 985' d='M148.941 424.657v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 986' d='M148.941 394.728v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 987' d='M148.941 364.799v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 988' d='M148.941 334.869v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 989' d='M148.941 304.94v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 990' d='M148.941 275.011v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 991' d='M148.941 245.081v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 992' d='M148.941 215.152v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 993' d='M148.941 185.223v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 994' d='M148.941 155.293v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 995' d='M148.941 125.364v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 996' d='M148.941 95.435v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 997' d='M148.941 65.505v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 998' d='M148.941 35.576v-5.647h5.647v5.647z'/%3E%3Cpath data-name='Rectangle 999' d='M148.941 5.647V0h5.647v5.647z'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+}
+/* *********** END SPLIDE */
+
+/* *********** SIDE BAR */
+
+#side__nav {
+  position: fixed;
+  left: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 20px;
+  height: 120px;
+}
+
+.side__nav--link {
+  box-sizing: content-box;
+
+  cursor: pointer;
+  background: #9b9b9b;
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  position: relative;
+
+  border: 5px solid none;
+  transition: all 0.3s ease-out;
+}
+.side__nav--link::before {
+  box-sizing: content-box;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  transition: all 0.3s ease-out;
+  border: 5px solid transparent;
+}
+
+.side__nav--link:hover {
+  background-color: transparent;
+}
+
+.side__nav--link.is-active-side {
+  background-color: transparent;
+  border: 5px solid #4361ee;
+}
+
+.side__nav--link:hover::before {
+  background-color: transparent;
+  border: 5px solid #4361ee;
+}

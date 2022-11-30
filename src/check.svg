@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="check" viewBox="0 0 35 35">
+        <path
+          data-name="Icon ionic-md-checkmark-circle-outline"
+          d="m10.325 14.175-2.45 2.45L15.75 24.5 33.25 7 30.8 4.55 15.75 19.512ZM31.5 17.5A13.94 13.94 0 1 1 21.35 4.025l2.712-2.713a16.278 16.278 0 0 0-6.563-1.313 17.5 17.5 0 1 0 17.5 17.5Z"
+          fill="#26abff" />
+      </symbol>
+      <symbol id="praxe" viewBox="0 0 150 150">
+        <defs>
+          <clipPath id="a">
+            <path
+              data-name="Path 1994"
+              d="M0 0h150v150H0Z"
+              transform="translate(-453 6968)"
+              fill="#26abff" />
+          </clipPath>
+        </defs>
+        <g
+          data-name="Mask Group 73"
+          transform="translate(453 -6968)"
+          clip-path="url(#a)">
+          <g transform="translate(-453 6968)">
+            <path data-name="Rectangle 1105" fill="none" d="M0 0h150v150H0z" />
+            <circle
+              data-name="Ellipse 193"
+              cx="46.175"
+              cy="46.175"
+              r="46.175"
+              transform="translate(20.765 16.035)"
+              fill="#e3e7ed" />
+            <circle
+              data-name="Ellipse 194"
+              cx="46.175"
+              cy="46.175"
+              r="46.175"
+              transform="translate(20.765 16.035)"
+              fill="#e3e7ed" />
+            <circle
+              data-name="Ellipse 195"
+              cx="46.175"
+              cy="46.175"
+              r="46.175"
+              transform="translate(20.765 16.035)"
+              fill="#e3e7ed" />
+            <circle
+              data-name="Ellipse 196"
+              cx="46.175"
+              cy="46.175"
+              r="46.175"
+              transform="translate(20.765 16.035)"
+              fill="#e3e7ed" />
+            <circle
+              data-name="Ellipse 197"
+              cx="46.175"
+              cy="46.175"
+              r="46.175"
+              transform="translate(20.765 16.035)"
+              fill="#e3e7ed" />
+            <circle
+              data-name="Ellipse 198"
+              cx="46.175"
+              cy="46.175"
+              r="46.175"
+              transform="translate(20.765 16.035)"
+              fill="#e3e7ed" />
+            <circle
+              data-name="Ellipse 199"
+              cx="46.175"
+              cy="46.175"
+              r="46.175"
+              transform="translate(20.765 16.035)"
+              fill="#e3e7ed" />
+            <path
+              data-name="Path 3578"
+              d="M66.94 16.035A46.175 46.175 0 1 1 20.765 62.21 46.175 46.175 0 0 1 66.94 16.035Z"
+              fill="#26abff"
+              opacity=".2" />
+            <path
+              data-name="Path 3573"
+              d="m90.42 131.39-4.375 2.295a2.39 2.39 0 0 1-2.235 0l-4.375-2.295c-24-12.625-38.81-35.92-38.81-61.13V54.865a2.385 2.385 0 0 1 2.12-2.365c8.28-.875 14.865-6.8 15.91-14.3a2.42 2.42 0 0 1 2.385-2.1h47.775a2.415 2.415 0 0 1 2.385 2.1c1.05 7.5 7.63 13.425 15.91 14.3a2.385 2.385 0 0 1 2.12 2.385v15.4c0 25.185-14.79 48.48-38.81 61.105Z"
+              fill="none"
+              stroke="#26abff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="7" />
+            <path
+              data-name="Path 3574"
+              d="m89 119.575-3.26 1.71a1.785 1.785 0 0 1-1.665 0l-3.26-1.71c-17.9-9.41-28.92-26.77-28.92-45.555V62.55a1.78 1.78 0 0 1 1.58-1.78c6.17-.65 11.075-5.07 11.855-10.655a1.8 1.8 0 0 1 1.775-1.565h35.605a1.8 1.8 0 0 1 1.775 1.565c.785 5.585 5.69 10 11.86 10.655a1.78 1.78 0 0 1 1.575 1.78V74c.02 18.805-11 36.165-28.92 45.575Z"
+              fill="none"
+              stroke="#26abff"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3.5" />
+          </g>
+        </g>
+      </sVG>
